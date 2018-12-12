@@ -3,7 +3,7 @@ Code and instructions for building an ARMv8 tileserver-gl docker image.
 
 ## Building the docker image
 
-_NOTE: The docker image must be build on an ARMv8 board so that an ARM docker image is created._
+_NOTE: The docker image must be built on an ARMv8 board so that an ARM docker image is created._
 
 First clone this repository. Because we are using submodules, use the `--recursive` flag, like:
 ```

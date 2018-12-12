@@ -5,9 +5,9 @@ Code and instructions for building an ARMv8 tileserver-gl docker image.
 
 _NOTE: The docker image must be built on an ARMv8 board so that an ARM docker image is created._
 
-First clone this repository. Because we are using submodules, use the `--recursive` flag, like:
+First clone this repository. Although we are using submodules, do __not__ use the `--recursive` flag when cloning. The submodules will be loaded by the build script. Pre-loading them causes problems with the docker build.
 ```
-git clone --recursive <url>
+git clone https://github.com/Rapid-Imaging-Tech/tileserver-gl-arm.git
 ```
 Then, change directories into the root of the repository and run:
 ```

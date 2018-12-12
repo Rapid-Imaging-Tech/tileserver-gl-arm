@@ -18,6 +18,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install v6.15.1
 
+# initialize the submodules
+cd $HOME
+git submodule init
+git submodule update
+
 # build mapbox-gl-native
 cd $HOME/mapbox-gl-native
 git checkout arm-64-build

@@ -9,7 +9,7 @@ First clone this repository. Because we are using submodules, use the `--recursi
 ```
 git clone --recursive <url>
 ```
-The, change directories into the root of the repository and run:
+Then, change directories into the root of the repository and run:
 ```
 docker build -t tileserver-gl-arm .
 ```

@@ -19,6 +19,7 @@ apt-get -qq update
 apt-get -y install \
     apt-transport-https \
     curl \
+    wget \
     unzip \
     build-essential \
     python \
@@ -94,6 +95,7 @@ rm -rf $HOME/.npm
 
 apt-get -y remove \
     curl \
+    wget \
     unzip \
     build-essential \
     libcairo2-dev \

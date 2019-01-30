@@ -70,6 +70,7 @@ npm install --build-from-source --production
 
 # install tileserver-gl-styles
 cd $APP/tileserver-gl-styles
+git checkout master
 node publish.js
 npm install . -g
 

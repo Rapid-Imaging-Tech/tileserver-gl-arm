@@ -67,6 +67,11 @@ cd $APP/tileserver-gl
 git checkout arm-64-build
 npm install --build-from-source --production
 
+# install tileserver-gl-styles
+cd $APP/tileserver-gl-styles
+node publish.js
+npm install . -g
+
 # copy the stuff we need from mapbox-gl-native
 mkdir -p node_modules/@mapbox/mapbox-gl-native
 mv $APP/mapbox-gl-native/lib/ node_modules/@mapbox/mapbox-gl-native/

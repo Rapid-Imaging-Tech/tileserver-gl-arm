@@ -12,35 +12,35 @@ onerror () {
 trap onerror ERR
 
 # install version 6 of node, as required by tileserver-gl
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm install v6.15.1
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#nvm install v6.15.1
 
 # initialize the submodules
-cd $HOME
-git submodule init
-git submodule update
+#cd $HOME
+#git submodule init
+#git submodule update
 
 # build mapbox-gl-native
-cd $HOME/mapbox-gl-native
-git checkout arm-64-build
-cp /usr/bin/ninja platform/linux/
+#cd $HOME/mapbox-gl-native
+#git checkout arm-64-build
+#cp /usr/bin/ninja platform/linux/
 
-make node
+#make node
 
 # installs tileserver-gl WITHOUT the mapbox-gl-native
 # dependency - we need to use the one we built.
-cd $HOME/tileserver-gl
-git checkout arm-64-build
-npm install --build-from-source
+#cd $HOME/tileserver-gl
+#git checkout arm-64-build
+#npm install --build-from-source
 
 # install tileserver-gl-styles
-cd $APP/tileserver-gl-styles
-git checkout master
-node publish.js
-npm install . -g
+#cd $HOME/tileserver-gl-styles
+#git checkout master
+#node publish.js
+#npm install . -g
 
 # copy the stuff we need from mapbox-gl-native
 mkdir -p node_modules/@mapbox/mapbox-gl-native

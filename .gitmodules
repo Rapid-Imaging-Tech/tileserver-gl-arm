@@ -1,6 +1,9 @@
 [submodule "mapbox-gl-native"]
 	path = mapbox-gl-native
-	url = https://github.com/Rapid-Imaging-Tech/mapbox-gl-native.git
+	url = https://github.com/bit-chemist/mapbox-gl-native.git
 [submodule "tileserver-gl"]
 	path = tileserver-gl
-	url = https://github.com/Rapid-Imaging-Tech/tileserver-gl.git
+	url = https://github.com/bit-chemist/tileserver-gl.git
+[submodule "tileserver-gl-styles"]
+	path = tileserver-gl-styles
+	url = https://github.com/bit-chemist/tileserver-gl-styles.git
